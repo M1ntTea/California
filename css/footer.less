@@ -1,0 +1,30 @@
+@import url("var.less");
+.footer{
+    background-color: @grey;
+    &__row{
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+        .flex(row, space-between, stretch);
+        flex-wrap: wrap;
+        flex: 1 1 @mobile;
+        gap: 2vw;
+        .nav__logo{
+            // margin-right: 15px;
+            width: 170px;
+            height: 21px;
+        }
+        p{
+            max-width: 300px;
+            margin-top: 0.5rem;
+        }
+    }
+    &__column{
+        li{
+            margin-top: 0.5rem;
+        }
+        .socialnetwork{
+            margin-top: 1rem;
+            max-width: 2rem;
+        }
+    }
+}

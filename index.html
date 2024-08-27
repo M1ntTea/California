@@ -5,50 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>California</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./image/">
 </head>
 <body>
-    <header class="header__top">
+    <header class="header header__top" >
         <div class="container">
-            <nav class="header__nav">
-                <img src="" alt="" class="logo__header">
-                <div class="burger" id="burger"><span></span></div>
-                <ul class="header__menu" id="headerMenu">
-                    <li class="menu__item"><a href="" class="menu__link">all products</a></li>
+            <nav class="nav header__nav">
+                <a href="/"><img src="/image/IMAGE.png" alt="" class="nav__logo"></a>
+                <!-- <div class="burger" id="burger"><span></span></div> -->
+                <ul class="nav__menu menu" id="headerMenu">
+                    <li class="menu__item"><a href="" class="menu__link">All products</a></li>
                     <li class="menu__item"><a href="" class="menu__link">Solutions</a></li>
                     <li class="menu__item"><a href="" class="menu__link">ABOUT</a></li>
                     <li class="menu__item"><a href="" class="menu__link">Support</a></li>
                 </ul>
-                <img src="" alt="" class="search">
-                <img src="" alt="" class="basket">
+                <div class="nav__control">
+                    <img src="./image/Icons/search.svg" alt="" class="search">
+                    <img src="./image/Icons/baskets.svg" alt="" class="basket">
+                </div>
             </nav>
         </div>
     </header>
-
+<!-- начало промо-блока -->
     <section class="promo">
         <div class="container">
             <!-- в дальнейшем в этом блоке нужно будет реализовать слайд шоу, но пока тут будет статичный фон -->
-            <div class="promo__background">
-                <h1>
-                    The new phones are here take a look.
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.
-                </p>
-                <button class="button__type__1">
-                    Explore
-                </button>
+            <div class="promo__inner">
+                <div class="arow__group">
+                    <img src="/image/Vector_right.svg" alt="" class="arow__right">
+                    <img src="/image/Vector_left.svg" alt="" class="arow__left">
+                </div>
+                <div class="col">
+                    <h1>
+                        The new phones are here take a look.
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.
+                    </p>
+                    <button class="btn">
+                        Explore
+                    </button>
+                    <!-- <button class="btn btn--sm">
+                        Explore
+                    </button> -->
+                </div>
+                <div class="col">
+                    <img src="/image/promo__img.png" alt="">
+                </div>
             </div>
         </div>
     </section>
-
+<!-- конец промо-блока -->
+<!-- начало продукт -->
     <section class="product">
         <div class="container">
             <h2>
                 Shop our latest offers and categories
             </h2>
-            <p>
+            <p class="heading">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -58,210 +72,270 @@
             <div class="product__row">
                 <!-- карточки слево -->
 
-                <div class="product__colon__right">
-                    <div class="product__card__1">
-                        <h3>
-                            Laptops
-                        </h3>
+                <div class="product__column product__column--left">
+                    <figure class="product__card">
+                            <div>
+                                <img src="/image/product1.png" alt="">
+                            </div>
+                        <figcaption class="product__card__text">
                         <p>
-                            True Laptop Solution
+                            Laptops
                         </p>
-                    </div>
-                    <div class="product__card__2">
                         <h3>
-                            Watch
+                            True Laptop Solution
                         </h3>
-                        <p>Not just stylisht
-
+                        </figcaption>
+                    </figure>
+                    <figure class="product__card">
+                            <div>
+                                <img src="/image/product3.png" alt="">
+                            </div>
+                        <figcaption class="product__card__text">
+                        <p>
+                            Watch
                         </p>
-                    </div>
+                        <h3>
+                            Not just stylisht
+                        </h3>
+                        </figcaption>
+                    </figure>
                 </div>
 
                 <!-- карточки справо -->
-                <div class="product__colon__left">
-                    <div class="product__card__3">
-                        <h3>
+                <div class="product__column product__column--right">
+                    <figure class="product__card">
+                            <div>
+                                <img src="/image/product2.png" alt="">
+                            </div>
+                        <figcaption class="product__card__text">
+                        <p>
                             Phones
-                        </h3>
-                        <p>
-                            Your day to day life
                         </p>
-                    </div>
-                    <div class="product__card__4">
                         <h3>
-                            Tablet
+                            Your day to day life
                         </h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="product__card">
+                            <div>
+                                <img src="/image/product4.png" alt="">
+                            </div>
+                        <figcaption class="product__card__text">
                         <p>
-                            Empower your work
+                            Tablet
                         </p>
-                    </div>
+                        <h3>
+                            Empower your work
+                        </h3>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
-
+<!-- конец продукт -->
+<!-- начало айтемов -->
     <section class="items">
         <div class="container">
             <h2>
                 Save on our most selled items.
             </h2>
-            <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
+            <p class="heading">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
 
             <!-- карточки -->
+        <div class="items__row">
              <div class="items__row">
-                <!-- карточки слево -->
-                <div class="items__colon__left">
-                    <div class="items__card__1">
-                        <img src="" alt="Macbook Pro 13">
-                        <h3>MacBook Pro 13</h3>
+                    <div class="items__card">
+                        <img src="./image/MacBookPro13.png" alt="Macbook Pro 13">
+                        <h4>MacBook Pro 13</h4>
                         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
                         <p><data value="1200">$ 1,200.00 USD</data></p>
                     </div>
-                    <div class="items__card__2">
-                        <img src="" alt="Smart Galaxy Watch 3">
-                        <h3>Smart Galaxy Watch 3</h3>
+                    <div class="items__card">
+                        <img src="./image/SmartGalaxyWatch3.png" alt="Smart Galaxy Watch 3">
+                        <h4>Smart Galaxy Watch 3</h4>
                         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         <p><data value="199">$ 199.00 USD</data></p>
                     </div>
-                </div>
-                <!-- карточки справо -->
-                <div class="items__colon__right">
-                    <div class="items__card__3">
-                        <img src="" alt="MacBook Air M1">
-                        <h3>MacBook Air M1</h3>
+            </div>
+            <div class="items__row">
+                    <div class="items__card">
+                        <img src="./image/MacBookAirM1.png" alt="MacBook Air M1">
+                        <h4>MacBook Air M1</h4>
                         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         <p><data value="1009">$ 1,009.00 USD</data></p>
                     </div>
-                    <div class="items__card__4">
-                        <img src="" alt="iPad">
-                        <h3>iPad</h3>
+                    <div class="items__card">
+                        <img src="./image/Ipad.png" alt="iPad">
+                        <h4>iPad</h4>
                         <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         <p><data value="610">$ 610.00 USD</data></p>
                     </div>
-                </div>
-             </div>
+            </div>
+        </div>
         </div>
     </section>
-
+<!-- конец айтемов -->
     <section class="best">
         <div class="container">
             <h2>
                 See the best around here
             </h2>
-            <p>
+            <p class="heading">
                 Our new Limited Edition Winter Design BESPOKE 4-Door Flex™
             </p>
 
             <!-- карточки -->
              <div class="best__row">
-                <div class="best__card__1">
+                <div class="best__card">
                     <p>Smart light bulb pack</p>
                     <h3>Latest and gratest</h3>
-                    <button class="button__type__1">Explore</button>
+                    <button class="btn">Explore</button>
+                    <img class="resp" src="./image/best1.png" alt="">
                 </div>
-                <div class="best__card__2">
+                <div class="best__card">
                     <p>Smart light bulb pack</p>
                     <h3>Best selling</h3>
-                    <button class="button__type__1">Explore</button>
+                    <button class="btn">Explore</button>
+                    <img class="resp" src="./image/best2.png" alt="">
                 </div>
-                <div class="best__card__3">
+                <div class="best__card">
                     <p>Smart light bulb pack</p>
                     <h3>Every product</h3>
-                    <button class="button__type__1">Explore</button>
+                    <button class="btn">Explore</button>
+                    <img class="resp" src="./image/best3.png" alt="">
                 </div>
              </div>
         </div>
     </section>
-
-    <section class="Ideas">
+<!-- начало частые вопросы -->
+    <section class="faq">
         <div class="container">
             <h2>Ideas have a place here</h2>
-            <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
+            <p class="heading">Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
+            <div class="ideas__row">
+                    <img src="./image/ideas.png" alt="" class="photo">
+                <div class="ideas__card">
+                    <ul>
+                        <li class="li1"><p>We Make It Easy To Find The Great Design Talent, Easier</p>
+                                <div class="collapsdown"><img src="./image/Icons/16px/collapsdown.svg" alt=""></div><p class="textghost">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                        <li class="li1"><p>Road Design Handbook For The International Road</p>
+                                <div class="collapsdown"><img src="./image/Icons/16px/collapsdown.svg" alt=""></div><p class="textghost">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                        <li class="li1"><p>The Best Kept Secrets About Creative People</p>
+                                <div class="collapsdown"><img src="./image/Icons/16px/collapsdown.svg" alt=""></div><p class="textghost">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                        <li class="li1"><p>We Make It Easy To Find The Great Design Talent, Easier</p>
+                                <div class="collapsdown"><img src="./image/Icons/16px/collapsdown.svg" alt=""></div><p class="textghost">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
 
-            <div class="ideas__card">
-                <img src="" alt="">
-                <ul>
-                    <li>We Make It Easy To Find The Great Design Talent, Easier...</li>
-                    <li>Road Design Handbook For The International Road...</li>
-                    <li>The Best Kept Secrets About Creative People</li>
-                    <li>We Make It Easy To Find The Great Design Talent, Easier...</li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-
-            <a href="">See all <img src="" alt=""></a>
-    </div>
+            <div class="ideas__see"><a href="">See all <img src="./image/Icons/seeall.svg" alt=""></a></div>
+        </div>
     </section>
-
-    <section>
+<!-- конец частые вопросы -->
+<!-- начало мининавигация -->
+    <section class="mininav">
         <div class="container">
             <h2>Looking for anything else?</h2>
-            <div class="search">
-                <img src="" alt="">
-                <input type="text" placeholder="Search keyword">
+            <div class="mininav__search">
+                <div class="input__group">
+                    <img src="./image/Icons/search2.svg" alt="">
+                    <input type="text" placeholder="Search keyword">
+                </div>
             </div>
 
-            <div class="search__button">
-                <button class="button__type__2">iPhone</button>
-                <button class="button__type__2">Charger</button>
-                <button class="button__type__2">Gift</button>
-                <button class="button__type__2">Google Pixel 3</button>
-                <button class="button__type__2">Keyboard</button>
-                <button class="button__type__2">13 Pro Max</button>
-                <button class="button__type__2">iPhone 12</button>
-                <button class="button__type__2">Laptop</button>
-                <button class="button__type__2">Mobile</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="subscription">
-        <div class="container">
-            <h2>Never miss a thing</h2>
-            <p>Sign up for texts to be notified about our best offers on the perfect gifts.</p>
-
-            <div class="input__subscription">
-                <input type="text" placeholder="Search keyword">
-                <input type="submit" value="Отправить">
+            <div class="mininav__buttons">
+                <button class="btn btn--sm">iPhone</button>
+                <button class="btn btn--sm">Charger</button>
+                <button class="btn btn--sm">Gift</button>
+                <button class="btn btn--sm">Google Pixel 3</button>
+                <button class="btn btn--sm">Keyboard</button>
+                <button class="btn btn--sm">13 Pro Max</button>
+                <button class="btn btn--sm">iPhone 12</button>
+                <button class="btn btn--sm">Laptop</button>
+                <button class="btn btn--sm">Mobile</button>
             </div>
         </div>
     </section>
-
-    <footer class="footer__bottom">
+<!-- конец мининавигация -->
+<!-- начало формы -->
+    <section class="forma">
         <div class="container">
+            <div class="forma__row">
+                <h2>Never miss a thing</h2>
+                <p>Sign up for texts to be notified about.</p>
+                <form action=".php" method="POST">
+                    <div class="forma__group">
+                        <label for=""></label> <input type="text" id="userName" name="username" placeholder="Your name" require="">
+                    </div>
+                    <div class="forma__group">
+                        <label for=""></label> <input type="tel" id="userTel" name="usertel" placeholder="+7 999 999 99-99" require="">
+                    </div>
+                    <div class="forma__group">
+                        <button type="submit" class="btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- конец формы -->
+<!-- начало подвала -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__column"> 
+                    <a href="/"><img src="/image/IMAGE.png" alt="" class="nav__logo"></a>
+                    <p>Sign up for texts to be notified about our best offers on the perfect gifts.</p>
+                    <a href="/"><img src="/image/Icons/socialmedia/Instargam.svg" alt="" class="socialnetwork"></a>
+                    <a href="/"><img src="/image/Icons/socialmedia/Telegram.svg" alt="" class="socialnetwork"></a>
+                    <a href="/"><img src="/image/Icons/socialmedia/VK.svg" alt="" class="socialnetwork"></a>
+                    <a href="/"><img src="/image/Icons/socialmedia/WhatsApp.svg" alt="" class="socialnetwork"></a>
+                </div>  
+            
+                <div class="footer__column"> 
+                    <h4>All products</h4>
+                    <ul>
+                        <li>Phones</li>
+                        <li>Watch</li>
+                        <li>Tablet</li>
+                        <li>Laptops</li>
+                    </ul>
+                </div>   
+                    
+                <div class="footer__column"> 
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Support</li>
+                    </ul>
+                </div>   
 
-            <img src="" alt="" class="logo__footer">
-            <p>Sign up for texts to be notified about our best offers on the perfect gifts.</p>
+                <div class="footer__column"> 
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Style Guide</li>
+                        <li>Licensing</li>
+                        <li>Change Log</li>
+                        <li>Contact</li>
+                    </ul>
+                </div> 
 
-            <h4>All products</h4>
-            <ul>
-                <li>Phones</li>
-                <li>Watch</li>
-                <li>Tablet</li>
-                <li>Laptops</li>
-            </ul>
-
-            <h4>Company</h4>
-            <ul>
-                <li>About</li>
-                <li>Support</li>
-            </ul>
-
-            <h4>Support</h4>
-            <ul>
-                <li>Style Guide</li>
-                <li>Licensing</li>
-                <li>Change Log</li>
-                <li>Contact</li>
-            </ul>
-
-            <h4>Follow Us</h4>
-            <ul>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>LinkedIn</li>
-                <li>Youtube</li>
-            </ul>
+                <div class="footer__column"> 
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>LinkedIn</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div> 
+            </div>
         </div>
     </footer>
+<!-- конец подвала -->
 </body>
 </html>

@@ -1,0 +1,41 @@
+@import url(var.less);
+.promo{
+    padding-bottom: 2rem;
+    &__inner{
+        background-color: @aqwa;
+        height: 550px;
+        overflow: hidden;
+        border-radius: 30px;
+        padding: 0 50px;
+        gap: 10vw;
+        position: relative;
+        .flex(row, space-between, stretch);
+        .col:nth-of-type(2){
+            .flex(column, center, start);
+            gap: 1.4rem;
+        }
+        .col:nth-of-type(3){
+            .flex(row, center, end);
+        }
+        @media (max-width: @tablet){
+            flex-wrap: wrap;
+        }
+    }
+}
+.arow__group{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arow__right,
+.arow__left{
+    position: absolute;
+}
+.arow__left{
+    left: 10px;
+}
+.arow__right{
+    right: 10px;
+}

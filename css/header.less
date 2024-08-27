@@ -1,0 +1,40 @@
+@import url(var.less);
+.header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .nav{
+        background: @white;
+        .flex();
+
+        &__logo{
+            margin-right: 15px;
+            width: 170px;
+            height: 21px;
+        }
+        &__menu{
+            .flex(row, center, stretch);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            list-style-type: none;
+            gap: 30px;
+
+            @media (max-width: @tablet){
+                display: none;
+            }
+        }
+    }
+}
+.menu{
+    &__item{
+        text-transform: uppercase;
+        font-family: @InterRegular;
+    }
+    &__link{
+        text-decoration: none;
+        color: @primary;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
